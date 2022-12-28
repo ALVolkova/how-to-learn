@@ -11,36 +11,60 @@
 
 
 .header {
+  display: flex;
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  background-color: #f2f2f2;
+
   /* выше установили ограничения для секции */
 }
 
 .header__logo_place_header {
 position: absolute;
+left: 0;
+top: 0;
 width: 228px;
-height: 32px;
-margin: 30px 0 0 64px;
-z-index: 1;
+margin-top: 30px;
+margin-left: 64px;
+z-index: 2;
+border: 1px solid red;
 }
 .header__title {
+
+  position: absolute;
   width: 730px;
-  display: flex;
-  font-size: 50px;
-  color: black;
-  justify-content: center;
-  margin-left: 64px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 600;
   z-index: 1;
+  border: 1px solid red;
 
 
 }
 .header__subtitle {
-  display: flex;
-  justify-content: space-between;
-  width: 388px;
-  margin-bottom: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   margin-left: 64px;
+  margin-bottom: 30px;
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  border: 1px solid red;
+
+
+}
+.header__main-illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 1;
+  border: 1px solid red;
 
 
 }
@@ -49,7 +73,20 @@ z-index: 1;
 .header__square-pic {
   height: 568px;
   width: 568px;
+  position: absolute;
+  right: 0;
+  margin-top: 64px;
+  background-color: #2f80ed;
+  background-repeat: no-repeat;
+  z-index: -1;
+  border: 1px solid red;
 }
+
+
+.header__link {
+  color: #2f80ed;
+}
+
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
