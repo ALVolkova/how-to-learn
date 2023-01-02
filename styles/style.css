@@ -72,6 +72,7 @@ z-index: 4;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+/* и элемента с модификатором вида ключ-значение */
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -142,7 +143,6 @@ z-index: 4;
 .digits {
   padding-top: 50px;
   padding-bottom: 100px;
-  border: 1px solid red;
 }
 .digits__section {
   display: flex;
@@ -158,14 +158,14 @@ z-index: 4;
 	flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
+
 
 }
 .table__cell {
+  margin-top: 60px;
   width:250px;
   list-style-type: none;
-  margin:0;
-  border: 1px solid green;
+
 }
 .table__heading {
   margin:0;
@@ -175,15 +175,58 @@ z-index: 4;
   font-weight:600;
 }
 .table__text {
-  margin:20;
+  padding-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
-.table__text__p {
- padding-top:20px;
+.table__text:last-child {
+ margin-bottom: 0;
 }
-/* и элемента с модификатором вида ключ-значение */
+
+.feynman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #f2f2f2;
+  height: 890px;
+}
+
+.feynman__title {
+width: 648px;
+line-height: 1.15;
+font-size: 120px;
+font-weight: 600;
+z-index: 4;
+text-align: center;
+}
+.feynman__subtitle {
+line-height: 51px;
+font-size: 36px;
+font-weight: normal;
+z-index: 4;
+text-align: center;
+}
+.feynman__link {
+line-height: 51px;
+font-size: 36px;
+font-weight: normal;
+color: #2f80ed;
+position: absolute;
+right: 0;
+top: 0;
+margin-top: 445px;
+margin-right: 48px;
+}
+.feynman__illustration {
+  width: 867px;
+  height: 637px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
 
 .table__cell_theme_dark {
   width: 200px;
