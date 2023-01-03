@@ -231,8 +231,8 @@ margin-right: 48px;
    padding-top: 90px;
    padding-bottom: 90px;
    background-color: #000000;
-   border: 1px solid green;
    overflow: hidden;
+   position: relative;
   }
   .kaufman__section {
     display: flex;
@@ -275,6 +275,7 @@ margin-right: 48px;
     color: white;
     margin-top: 80px;
     list-style-type: none;
+    z-index: 2;
 
   }
 
@@ -299,5 +300,5 @@ margin-right: 48px;
     position: absolute;
     z-index: 1;
     right: -210px;
-
+    top: 0;
   }
