@@ -5,6 +5,18 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  animation: rotation 20s infinite;
+}
 
 .header {
   box-sizing: border-box;
@@ -16,6 +28,7 @@
   background-color: #f2f2f2;
   align-items: center;
   z-index: 1;
+  overflow: hidden;
 
 
 }
@@ -77,8 +90,14 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+  opacity: 100%;
+  transition-property: opacity;
 }
 
+.header__link:hover {
+  opacity: 50%;
+  transition: linear 0.5s;
+}
 .description {
   box-sizing: border-box;
   padding-top: 100px;
@@ -136,16 +155,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .cards {
   width: 920px;
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
+
 }
 
 .cards__item {
@@ -159,14 +178,6 @@
   margin-right: 0px;
 }
 
-.cards__image {
-  width: 160px;
-  height: 160px;
-  border-radius: 100%;
-  margin: 60px 40px 43px 40px;
-
-}
-
 .cards__title {
   line-height: 1.15;
   font-size: 24px;
@@ -174,7 +185,6 @@
   margin: 0;
   margin-bottom: 16px;
   text-align: center;
-
 }
 
 .cards__description {
@@ -182,6 +192,13 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  margin: 60px 40px 43px 40px;
 }
 
 .video {
@@ -192,82 +209,27 @@
 }
 
 .video__iframes {
-  margin: 50px auto 100px auto;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
+
 }
 
 .video__iframe {
-margin-right: 20px;
+  margin-right: 20px;
+  margin-bottom: -3em;
 
 }
 
 .oakley {
   box-sizing: border-box;
-  padding-top: 100px;
+  padding-top: 160px;
   padding-bottom: 100px;
   display: flex;
   justify-content: center;
-}
-
-.digits {
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.section-title {
-  width: 60%;
-  margin: 0;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
-}
-
-.section-subtitle {
-  width: 60%;
-  margin: 0;
-  margin-top: 20px;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-}
-
-.table {
-  width: 1100px;
-  padding: 0;
-  margin: 0px auto 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.table__cell {
-  margin-top: 60px;
-  width: 250px;
-  list-style-type: none;
-
-}
-
-.table__heading {
-  margin: 0;
-  padding-bottom: 0px;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
-
-}
-
-.table__text {
-  margin: 0;
-  padding-top: 20px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-
+  background-color: #f2f2f2;
 }
 
 .feynman {
@@ -315,8 +277,155 @@ margin-right: 20px;
   top: 50%;
   margin: 0;
   text-decoration: none;
+  opacity: 100%;
+  transition-property: opacity;
 }
 
+.feynman__link:hover {
+  opacity: 50%;
+  transition: linear 0.5s;
+}
+
+
+.digits {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.section-title {
+  width: 60%;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 0;
+  margin-top: 20px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.table {
+  width: 1100px;
+  padding: 0;
+  margin: 0px auto 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+  list-style-type: none;
+
+}
+
+.table__heading {
+  margin: 0;
+  padding-bottom: 0px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.table__text {
+  margin: 0;
+  padding-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.khan {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f2f2f2;
+
+}
+
+.khan__container {
+  min-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.khan__autor {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  width: 790px;
+  margin-top: 50px;
+  margin-bottom: 36px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin-bottom: 10px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 68px;
+}
+
+.khan__book-container {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+}
+
+.khan__book-pic {
+  margin-right: 48px;
+  width: 620px;
+  height: 608px;
+  object-fit:cover;
+  object-position: 0 0;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  opacity: 100%;
+  transition-property: opacity;
+}
+
+.khan__buy-link:hover {
+  opacity: 50%;
+  transition: linear 0.5s;
+}
 
 .kaufman {
   padding-top: 90px;
@@ -394,7 +503,31 @@ margin-right: 20px;
   margin-bottom: 0;
 }
 
+.resources {
+  margin: 100px auto 217px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.resources__logo-zone {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin-top: 80px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  opacity: 100%;
+  transition-property: opacity;
+}
+
+.resources__logo:hover {
+  opacity: 50%;
+  transition: linear 0.5s;
+}
 
 .footer {
   box-sizing: border-box;
@@ -465,7 +598,13 @@ margin-right: 20px;
   color: white;
   margin: 0;
   text-decoration: none;
+  opacity: 100%;
+  transition-property: opacity;
+}
 
+.footer__column-link:hover {
+  opacity: 50%;
+  transition: linear 0.5s;
 }
 
 .footer__social-icon {
